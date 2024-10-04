@@ -7,6 +7,11 @@ module.exports = {
         lucida: ['"Lucida Console"', 'monospace'],
         segoe: ['"Segoe UI Variable Display"', 'sans-serif'],
       },
+
+      hyphens: {
+        auto: 'auto',
+        none: 'none',
+      },
       
       keyframes: {
         bounce: {
@@ -76,6 +81,17 @@ module.exports = {
         }
     },
   },
-  plugins: [],
+  plugins: [ function ({ addUtilities }) {
+      const newUtilities = {
+        '.hyphens-auto': {
+          hyphens: 'auto',
+        },
+        '.hyphens-none': {
+          hyphens: 'none',
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
 };
 

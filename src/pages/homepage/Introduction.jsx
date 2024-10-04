@@ -116,8 +116,8 @@ const Introduction = () => {
             <div className="flex flex-col justify-center items-start p-4 md:p-8">
                 <div className="max-w-md text-white">
                 <h2 className="text-3xl md:text-5xl font-bold tracking-wide">INTRODUCTION</h2>
-                <p className="mt-4 text-lg md:text-2xl text-justify leading-normal">
-                At Laguna, we pride ourselves on delivering a taste of true meat excellence. Our expert butchers hand-select and expertly prepare only the finest cuts, ensuring every piece meets the highest standards of quality and flavor. From succulent steaks and tender roasts to flavorful sausages and artisanal cured meats, each product is crafted to elevate your dining experience. Discover the rich, authentic taste of our meats and savor the perfection that sets us apart.
+                <p className="mt-4 text-lg md:text-2xl text-justify leading-relaxed hyphens-auto" >
+                I am a self-taught developer with 2 years of experience specializing in React, JavaScript, and Python. I am skilled in using Azure, GitHub, MongoDB, Node.js, HTML, Tailwind CSS, and Visual Studio to build dynamic, responsive web applications. I am passionate about continuous learning, both in technology and personal development. In my free time, I enjoy exploring new programming languages, reading self-help books, and music. I am eager to expand my skill set and contribute to innovative projects in a collaborative environment.
                 </p>
                 </div>
             </div>

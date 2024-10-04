@@ -6,7 +6,7 @@ const HeroSection = () => {
     return (
         <div>
             <h1 className="absolute text-xl flex justify-center items-center w-full font-lucida 
-                           md:p-32 p-16 top-20 md:top-32 space-x-4">
+                           sd:p-32 p-16 top-20 sd:top-32 space-x-4">
                 <span className="text-gray-300">JANCO</span>
                 <b className="text-white">ENGELBRECHT</b>
             </h1>

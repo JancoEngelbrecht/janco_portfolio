@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Footer = () => {
   return (
-    <footer className=" text-white py-6">
+    <footer className=" bg-gradient-to-br from-neutral-800 from-0% to-neutral-950 to-70% text-white py-6">
       <div className="container mx-auto text-center">
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 mb-4">
