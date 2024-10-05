@@ -68,7 +68,7 @@ const ContactForm = () => {
   return (
     <>
       
-      <div className="w-full bg-transparent">
+      <div className="w-full ">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-white">

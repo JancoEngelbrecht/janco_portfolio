@@ -29,7 +29,7 @@ const Header = () => {
   }, [menuOpen]);
 
   return (
-    <header className="absolute overflow-x-hidden pl-6 w-full h-36 text-white text-6xl font-segoe z-50">
+    <header className="relative overflow-x-hidden pl-6 w-full h-36 text-white text-6xl font-segoe z-50 bg-gradient-to-br from-neutral-800 from-0% to-neutral-950 to-70%">
       <div className="flex justify-between items-center w-full">
         <div className="flex items-center">
           <a href="/" className="hover:animate-bounce"><b>J</b></a>
