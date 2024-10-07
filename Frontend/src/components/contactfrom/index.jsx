@@ -34,7 +34,7 @@ const ContactForm = () => {
 
     if (!formData.phone) {
       newErrors.phone = 'Phone is required';
-    } else if (!/^\d{10}$/.test(formData.phone)) { // Assuming phone number should be 10 digits
+    } else if (!/^\d{10}$/.test(formData.phone)) { 
       newErrors.phone = 'Phone is invalid';
     }
 
@@ -48,10 +48,9 @@ const ContactForm = () => {
     }
 
     try {
-      const response1 = await axios.post(`${process.env.REACT_APP_API_URL}/contact`, formData);
-      const response2 = await axios.post(`${process.env.REACT_APP_API_URL}/api/contactus`, formData);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact`, formData);
 
-      if (response1.status === 200 && response2.status === 200) {
+      if (response.status === 200) {
         console.log('Form submitted successfully');
         setFormData({ name: '', email: '', phone: '', message: '' });
         setIsSubmitted(true);
