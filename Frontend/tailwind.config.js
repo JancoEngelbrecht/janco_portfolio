@@ -28,7 +28,7 @@ module.exports = {
             '100%': { transform: 'translate(-220%)', opacity: '1' },
           },
           movejavascript: {
-            '0%': { transform: 'translate(-80%,0%)', opacity: '1' },
+            '0%': { transform: 'translate(-80%,100%)', opacity: '1' },
             '100%': { transform: 'translate(-220%,100%)', opacity: '1' },
           },
           movemongodb: {
@@ -44,11 +44,11 @@ module.exports = {
             '100%': { transform: 'translate(-40%, -40%)', opacity: '1' },
           },
           moveazure: {
-            '0%': { transform: 'translate(-80%,70%)', opacity: '1' },
+            '0%': { transform: 'translate(-80%,115%)', opacity: '1' },
             '100%': { transform: 'translate(10%, 115%)', opacity: '1' },
           },
           movecosmosdb: {
-            '0%': { transform: 'translate(-80%,70%)', opacity: '1' },
+            '0%': { transform: 'translate(-80%,250%)', opacity: '1' },
             '100%': { transform: 'translate(80%, 250%)', opacity: '1' },
           },
           movenodejs: {

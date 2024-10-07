@@ -29,6 +29,12 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "env": {
+      "jest": true
+    },
+    "plugins": [
+      "jest"
     ]
   },
   "browserslist": {
@@ -44,6 +50,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.25.7",
+    "@babel/preset-react": "^7.25.7",
+    "babel-jest": "^29.7.0",
     "tailwindcss": "^3.4.13"
   }
 }
