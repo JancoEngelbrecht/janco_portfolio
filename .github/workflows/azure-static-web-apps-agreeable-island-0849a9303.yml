@@ -5,21 +5,21 @@ on:
     branches:
       - main
     paths:
-      - 'frontend/**'
-      - 'backend/**'
+      - 'Frontend/**'
+      - 'Backend/**'
   pull_request:
     types: [opened, synchronize, reopened]
     branches:
       - main
     paths:
-      - 'frontend/**'
-      - 'backend/**'
+      - 'Frontend/**'
+      - 'Backend/**'
   workflow_dispatch:
 
 jobs:
   # Frontend job (build and deploy only if changes are in the frontend directory)
   build_and_deploy_frontend:
-    if: contains(github.event.head_commit.message, 'frontend')
+    if: contains(github.event.head_commit.message, 'Frontend')
     runs-on: ubuntu-latest
     name: Build and Deploy Frontend
     steps:
@@ -35,7 +35,7 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_AGREEABLE_ISLAND_0849A9303 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "./frontend"  # App source code path
+          app_location: "./Frontend"  # App source code path
           api_location: ""  # API source code path - optional
           output_location: "build"  # Built app content directory - optional
         env:
@@ -43,7 +43,7 @@ jobs:
 
   # Backend job (build and deploy only if changes are in the backend directory)
   build_and_deploy_backend:
-    if: contains(github.event.head_commit.message, 'backend')
+    if: contains(github.event.head_commit.message, 'Backend')
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
@@ -56,13 +56,13 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
-        working-directory: ./backend
+        working-directory: ./Backend
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: ./backend
+          path: ./Backend
 
   # Deployment job
   deploy:
