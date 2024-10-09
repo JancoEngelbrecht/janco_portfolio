@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 // Set up CORS options
 const corsOptions = {
-    origin: process.env.URL, 
+    origin: process.env.FRONTEND_URL, 
     credentials: true,
     optionSuccessStatus: 200
 };
