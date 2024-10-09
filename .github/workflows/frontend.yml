@@ -99,4 +99,4 @@ jobs:
 
     env:
         SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-        
+        FRONTEND_URL: ${{ secrets.FRONTEND_URL }}
