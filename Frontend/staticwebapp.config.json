@@ -1,0 +1,14 @@
+{
+    "routes": [
+      {
+        "route": "/static/*",
+        "headers": {
+          "cache-control": "max-age=3600"
+        }
+      },
+      {
+        "route": "/*",
+        "rewrite": "/index.html"
+      }
+    ]
+  }
