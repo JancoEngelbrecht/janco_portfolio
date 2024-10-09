@@ -25,6 +25,7 @@ jobs:
 
       - name: npm install, build, and test
         run: |
+          cd Backend
           npm install
         working-directory: ./backend
 
@@ -52,7 +53,7 @@ jobs:
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'Lagunabutchery'
+          app-name: 'jancoengelbrecht'
           slot-name: 'Production'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
