@@ -35,7 +35,6 @@ Upon visiting the website, users are greeted with a visually engaging **scroll-t
 
 
 ---
-5)
 
 ## Introduction Section
 
