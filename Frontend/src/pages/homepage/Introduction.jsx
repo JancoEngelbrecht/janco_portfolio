@@ -117,7 +117,7 @@ const Introduction = () => {
                 <div className="max-w-md text-white">
                 <h2 className="text-3xl md:text-5xl font-bold tracking-wide">INTRODUCTION</h2>
                 <p className="mt-4 text-lg md:text-2xl text-justify leading-relaxed hyphens-auto" >
-                I am a Process Engineer with self-taught development experiance, which include &plusmn; 8 months of experience specializing in React and JavaScript, and &plusmn; 1 year Python. I am skilled in using Azure, GitHub, MongoDB, Node.js, HTML, Tailwind CSS, and Visual Studio to build dynamic, responsive web applications. I am passionate about continuous learning, both in technology and personal development. In my free time, I enjoy exploring software development, reading self-help books, and music. I am eager to expand my skill set and contribute to innovative projects in a collaborative environment.
+                I am a Process Engineer with self-taught development experience, which include &plusmn; 8 months of experience specializing in React and JavaScript, and &plusmn; 1 year Python. I am skilled in using Azure, GitHub, MongoDB, Node.js, HTML, Tailwind CSS, and Visual Studio to build dynamic, responsive web applications. I am passionate about continuous learning, both in technology and personal development. In my free time, I enjoy exploring software development, reading self-help books, and music. I am eager to expand my skill set and contribute to innovative projects in a collaborative environment.
                 </p>
                 </div>
             </div>

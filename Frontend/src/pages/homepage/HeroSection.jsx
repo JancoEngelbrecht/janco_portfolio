@@ -10,7 +10,7 @@ const HeroSection = () => {
                 <span className="text-gray-300">JANCO</span>
                 <b className="text-white">ENGELBRECHT</b>
             </h1>
-            <div className="flex overflow-hidden justify-center items-center w-full h-screen relative">
+            <div className="flex overflow-hidden justify-center sd:top-52 items-center w-full h-screen relative">
                 <img 
                     src={pencap}
                     alt="pen cap"
