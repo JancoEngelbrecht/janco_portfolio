@@ -33,7 +33,7 @@ Upon visiting the website, users are greeted with a visually engaging **scroll-t
 
 ![image](https://github.com/user-attachments/assets/0a060825-e479-466d-92ea-d333da5a2e0d)
 
-![image](https://github.com/user-attachments/assets/d1d3de27-8553-4484-96aa-b98e7a6bad4
+![image](https://github.com/user-attachments/assets/d1d3de27-8553-4484-96aa-b98e7a6bad4)
 
 ---
 5)
