@@ -26,7 +26,7 @@ const Laguna = () => {
               <iframe
                 src="https://proud-desert-0a59d0b03.5.azurestaticapps.net"
                 title="Laguna Website"
-                className="w-full h-full rounded-md border-none"
+                className="w-full h-full rounded-[40px] border-none"
               />
             </div>
             {/* Image of the website for smaller screens */}
