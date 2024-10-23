@@ -9,9 +9,12 @@ const app = express();
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
+// Determine the environment
+const isProduction = process.env.NODE_ENV === 'production';
+
 // Set up CORS options
 const corsOptions = {
-    origin: process.env.FRONTEND_URL, 
+    origin: isProduction ? process.env.FRONTEND_URL : 'http://localhost:3000',
     credentials: true,
     optionSuccessStatus: 200
 };
