@@ -1,14 +1,21 @@
 {
-    "routes": [
-      {
-        "route": "/static/*",
-        "headers": {
-          "cache-control": "max-age=3600"
-        }
-      },
-      {
-        "route": "/*",
-        "rewrite": "/index.html"
+  "mimeTypes": {
+    ".json": "application/json"
+  },
+  "routes": [
+    {
+      "route": "/static/*",
+      "headers": {
+        "cache-control": "max-age=3600"
       }
-    ]
-  }
+    },
+    {
+      "route": "/manifest.json",
+      "serve": "/manifest.json"
+    },
+    {
+      "route": "/*",
+      "rewrite": "/index.html"
+    }
+  ]
+}
