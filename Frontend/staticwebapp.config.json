@@ -1,6 +1,7 @@
 {
   "mimeTypes": {
-    ".json": "application/json"
+    ".json": "application/json",
+    ".ico": "image/x-icon"
   },
   "routes": [
     {
@@ -12,6 +13,10 @@
     {
       "route": "/manifest.json",
       "serve": "/manifest.json"
+    },
+    {
+      "route": "/favicon.ico",
+      "serve": "/favicon.ico"
     },
     {
       "route": "/*",
