@@ -2,9 +2,9 @@ import React from 'react';
 import LagunaLogo from './../../assets/laguna.png';
 import LagunaMainScreen from './../../assets/lagunamainscreen.png'; // Import the image of the website
 
-const Laguna = () => {
+const Laguna:React.FC = () => {
   return (
-    <section>
+    <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-4 md:p-8">
       {/* Left side - Logo */}
       <div className="relative flex justify-center items-center">
@@ -95,7 +95,7 @@ const Laguna = () => {
         </li>
       </ul>
     </div>
-    </section>
+    </>
   );
 };
 

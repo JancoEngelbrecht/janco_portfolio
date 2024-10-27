@@ -2,7 +2,7 @@ import React from "react";
 import pencap from "../../assets/pencap.png";
 import penbody from "../../assets/penbody.png";
 
-const HeroSection = () => {
+const HeroSection:React.FC = () => {
     return (
         <div>
             <h1 className="absolute text-xl flex justify-center items-center w-full font-lucida 

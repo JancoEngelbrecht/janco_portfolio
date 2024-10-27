@@ -8,7 +8,7 @@ import useHeroScrollEffects from "./HeroScrollEffects";
 import HeroSection from "./HeroSection";
 import Introduction from "./Introduction";
 
-const Home = () => {
+const Home: React.FC = () => {
 
     useHeroScrollEffects(); 
     useIntroScrollEffect();

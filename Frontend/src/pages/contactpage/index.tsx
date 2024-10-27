@@ -3,7 +3,7 @@ import React from 'react';
 import ContactForm from '../../components/contactfrom/index';
 
 
-const Contact = () => {
+const Contact:React.FC = () => {
   return (
     <div className=" top-10 min-h-screen flex items-center justify-center bg-gradient-to-tr from-neutral-800 from-0% to-neutral-950 to-70%">
       <div className="inset-0 opacity-50"></div>
