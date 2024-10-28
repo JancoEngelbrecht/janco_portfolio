@@ -56,7 +56,6 @@ jobs:
           app_location: "./Frontend" 
           api_location: "" 
           output_location: "build"
-          environment: "preview"  
         env:
           REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
 

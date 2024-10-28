@@ -14,7 +14,7 @@ import nodejsIcon from "../../assets/Node.js.png"
 import pythonIcon from "../../assets/Python.png"
 import vscodeIcon from "../../assets/VScode.png"
 
-const Introduction = () => {
+const Introduction:React.FC = () => {
 
     return (
 

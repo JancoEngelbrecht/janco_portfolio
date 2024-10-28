@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import menuicon from "../../assets/menu_icon.png";
 
-const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+const Header:React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   // Toggle menu state
   const handleMenuClick = () => {
@@ -11,8 +11,9 @@ const Header = () => {
 
   // Close the menu when clicking outside of it
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (!event.target.closest("#menu") && !event.target.closest("#menuicon")) {
+    const handleClickOutside = (event:MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest("#menu") && !target.closest("#menuicon")) {
         setMenuOpen(false); // Close the menu when clicking outside
       }
     };

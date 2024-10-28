@@ -2,7 +2,7 @@ import React from 'react';
 
 import Laguna from "./laguna"
 
-const Projects = () => {
+const Projects:React.FC = () => {
   return (
     <div className=" text-white bg-gradient-to-tr from-neutral-800 from-0% to-neutral-950 to-70%">
         <h1 className="relative text-xl flex justify-center items-center w-full font-lucida 

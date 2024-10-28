@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Header from '../header/index';
 import Footer from '../footer/index';
 
-const Layout = () => {
+const Layout:React.FC = () => {
 
   return (
     <div className="flex flex-col">
