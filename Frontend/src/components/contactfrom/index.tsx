@@ -1,26 +1,41 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
+interface FormErrors {
+  name?: string;
+  email?: string;
+  phone?: string;
+  message?: string;
+  submission?: string;  
+}
+
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
     message: ''
   });
 
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
     setErrors({ ...errors, [name]: '' }); 
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let newErrors = {};
+    let newErrors: FormErrors = {};
 
     if (!formData.name) {
       newErrors.name = 'Name is required';
