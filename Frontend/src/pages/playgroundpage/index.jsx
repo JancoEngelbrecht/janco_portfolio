@@ -1,11 +1,11 @@
 import React from 'react'
-import Dropdown from './dropdown'
+import NavComponents from './navcomponents'
 
 const index = () => {
   
   return (
     <div>
-        <Dropdown />
+        <NavComponents />
     </div>
 );
 };

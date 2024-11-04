@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 // Custom Hook
-const usePlaygroundEffects = () => {
+const useDropdownEffects = () => {
 
     const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -39,4 +39,4 @@ const usePlaygroundEffects = () => {
     
  
 
-export default usePlaygroundEffects
+export default useDropdownEffects
