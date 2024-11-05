@@ -11,7 +11,7 @@ const Index: React.FC = () => {
       <div className="relative flex flex-col h-4/5 w-2/3 bg-slate-100 border border-gray-300 shadow-md rounded-xl overflow-hidden">
 
       {/* Background image with responsive styling */}
-      <img src={PlaneImage} className='absolute inset-0 w-full h-full object-cover z-0'></img>
+      <img src={PlaneImage} alt='Plane window' className='absolute inset-0 w-full h-full object-cover z-0'></img>
      
 
         <div className='flex w-full z-20'>
