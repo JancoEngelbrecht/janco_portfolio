@@ -2,12 +2,20 @@ import React, { useState, useEffect } from 'react';
 import UseDropdownEffects from './dropdownEffects';
 import { FaEllipsisV } from 'react-icons/fa';
 
-const Dropdown = () => {
-  const { isDropdownVisible, toggleDropdown } = UseDropdownEffects();
-  const [activeOption, setActiveOption] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+// Define Option Types
+interface Option {
+  label: string;
+  subOptions: string[];
+}
 
-  const mainOptions = [
+const Dropdown:React.FC = () => {
+  const { isDropdownVisible, toggleDropdown } = UseDropdownEffects();
+  
+  const [activeOption, setActiveOption] = useState<number | null>(null);
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
+
+  // Use Option Types
+  const mainOptions: Option[] = [
     { label: 'Option 1', subOptions: ['Sub-option 1.1', 'Sub-option 1.2'] },
     { label: 'Option 2', subOptions: ['Sub-option 2.1', 'Sub-option 2.2'] },
     { label: 'Option 3', subOptions: ['Sub-option 3.1', 'Sub-option 3.2'] }
@@ -25,8 +33,8 @@ const Dropdown = () => {
 
   // Close submenu on outside click
   useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (!event.target.closest("#dropdownContent")) {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (!(event.target as HTMLElement).closest("#dropdownContent")) {
         setActiveOption(null);
       }
     };
@@ -35,7 +43,7 @@ const Dropdown = () => {
     return () => document.removeEventListener("click", handleOutsideClick);
   }, []);
 
-  const handleOptionClick = (index) => {
+  const handleOptionClick = (index: number) => {
     setActiveOption(activeOption === index ? null : index);
   };
 

@@ -3,23 +3,19 @@ import { useEffect, useState } from "react"
 // Custom Hook
 const useDropdownEffects = () => {
 
-    const [isDropdownVisible, setDropdownVisible] = useState(false);
-
-    const toggleDropdown = () => { 
-        setDropdownVisible((prev) => !prev)
-     }
+    const [isDropdownVisible, setDropdownVisible] = useState<boolean>(false);
+    const toggleDropdown = () => { setDropdownVisible((prev) => !prev)}
 
 
     //useEffect: Run code after Component Renders
     useEffect(() => {
-        
-        const handleClickOutside = (e) => { 
+        const handleClickOutside = (e: MouseEvent) => { 
             const dropdownButton = document.getElementById('dropdownButton')
             const dropdownContent = document.getElementById('dropdownContent')
 
             if (dropdownButton && dropdownContent && 
-                !dropdownButton.contains(e.target) && 
-                !dropdownContent.contains(e.target)) {
+                !dropdownButton.contains(e.target as Node) && 
+                !dropdownContent.contains(e.target as Node)) {
                 setDropdownVisible(false);
             }
         };

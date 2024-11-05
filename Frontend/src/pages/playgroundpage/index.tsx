@@ -1,7 +1,7 @@
 import React from 'react'
 import NavComponents from './navcomponents'
 
-const index = () => {
+const index: React.FC = () => {
   
   return (
     <div>

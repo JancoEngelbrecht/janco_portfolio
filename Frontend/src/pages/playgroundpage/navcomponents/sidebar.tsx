@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { FaHome, FaUser, FaCog, FaFolder, FaBars } from "react-icons/fa";
 
-const Sidebar = () => {
-  const [isHovered, setIsHovered] = useState(false); // Controls main sidebar visibility on hover
-  const [hoveredItemIndex, setHoveredItemIndex] = useState(null); // Tracks which main menu item is being hovered
-  const [isMobile, setIsMobile] = useState(false); // Tracks if screen is mobile
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Toggle for sidebar on mobile
+const Sidebar: React.FC = () => {
+  const [isHovered, setIsHovered] = useState<boolean>(false); // Controls main sidebar visibility on hover
+  const [hoveredItemIndex, setHoveredItemIndex] = useState<number | null>(null); // Tracks which main menu item is being hovered
+  const [isMobile, setIsMobile] = useState<boolean>(false); // Tracks if screen is mobile
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false); // Toggle for sidebar on mobile
 
-  const menuItems = [
+  interface Items {
+    icon: React.ReactNode;
+    label: string;
+    subMenu: string[];
+  }
+
+  const menuItems:Items[] = [
     { icon: <FaHome />, label: "Home", subMenu: ["Option 1", "Option 2", "Option 3", "Option 4", "Option 5", "Option 6"] },
     { icon: <FaUser />, label: "Profile", subMenu: ["Option 1", "Option 2", "Option 3"] },
     { icon: <FaCog />, label: "Settings", subMenu: ["Option 1", "Option 2", "Option 3", "Option 4"] },
@@ -73,7 +79,7 @@ const Sidebar = () => {
           onMouseLeave={() => setHoveredItemIndex(null)}
         >
           <ul>
-            {menuItems[hoveredItemIndex].subMenu.map((subItem, subIndex) => (
+            {menuItems[hoveredItemIndex!]?.subMenu.map((subItem, subIndex) => (
               <li
                 key={subIndex}
                 className="p-2 px-4 whitespace-nowrap hover:bg-gray-300 cursor-pointer text-gray-700"

@@ -1,9 +1,8 @@
 import React from 'react';
 import Dropdown from './dropdown';
 import Sidebar from './sidebar';
-import Searchbar from './searchbar';
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
     <div className="relative flex justify-center items-center w-screen h-screen">
       <div className="relative flex flex-col h-4/5 w-2/3 bg-slate-100 border border-gray-300 shadow-md rounded-xl overflow-hidden">

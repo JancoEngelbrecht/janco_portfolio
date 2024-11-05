@@ -1,12 +1,25 @@
 import React, { useState } from "react";
 
-const countries = ["United States", "Canada", "United Kingdom", "Australia", "France", "Germany", "Japan"]; // Example countries, can be expanded
+const countries: string[] = [
+    "United States", 
+    "Canada", 
+    "United Kingdom", 
+    "Australia", 
+    "France", 
+    "Germany", 
+    "Japan"
+]; // Example countries, can be expanded
 
-const Searchbar = () => {
-    const [destination, setDestination] = useState("");
-    const [departDate, setDepartDate] = useState("");
-    const [passengerCount, setPassengerCount] = useState({ adults: 1, children: 0 });
-    const [showPassengerDropdown, setShowPassengerDropdown] = useState(false);
+interface PassengerCount {
+    adults: number;
+    children: number;
+}
+
+const Searchbar: React.FC = () => {
+    const [destination, setDestination] = useState<string>("");
+    const [departDate, setDepartDate] = useState<string>("");
+    const [passengerCount, setPassengerCount] = useState<PassengerCount>({ adults: 1, children: 0 });
+    const [showPassengerDropdown, setShowPassengerDropdown] = useState<boolean>(false);
 
     return (
         <div className="bg-white shadow-md rounded-lg p-4 max-w-4xl mx-auto">
