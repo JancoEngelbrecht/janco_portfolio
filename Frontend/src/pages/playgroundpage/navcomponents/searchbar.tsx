@@ -37,7 +37,7 @@ const Searchbar: React.FC = () => {
                         onChange={(e) => setDestination(e.target.value)}
                         className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm"
                     >
-                        <option value="">Select Destination</option>
+                        <option value="" disabled hidden>Select Destination</option>
                         {countries.map((country, index) => (
                             <option key={index} value={country}>{country}</option>
                         ))}
@@ -50,9 +50,10 @@ const Searchbar: React.FC = () => {
                     <DatePicker
                         selected={departDate}
                         onChange={(date: Date | null) => setDepartDate(date)} // TypeScript-compatible onChange
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                        className="mt-1 block w-full max-w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                         dateFormat="MM/dd/yyyy"
-                        calendarClassName="rounded-lg border border-gray-300 shadow-lg"
+                        calendarClassName="max-w-full rounded-lg border border-gray-300 shadow-lg"
+                        placeholderText="Select Date"
                     />
                      </div>
                     

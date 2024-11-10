@@ -81,13 +81,21 @@ module.exports = {
         }
     },
   },
-  plugins: [ function ({ addUtilities }) {
+  plugins: [
+    function ({ addUtilities }) {
       const newUtilities = {
         '.hyphens-auto': {
           hyphens: 'auto',
         },
         '.hyphens-none': {
           hyphens: 'none',
+        },
+        '.scrollbar-hide': {
+          '-ms-overflow-style': 'none',  /* IE and Edge */
+          'scrollbar-width': 'none',     /* Firefox */
+        },
+        '.scrollbar-hide::-webkit-scrollbar': {
+          display: 'none', /* Chrome, Safari, and Opera */
         },
       };
       addUtilities(newUtilities);
