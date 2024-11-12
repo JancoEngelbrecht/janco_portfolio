@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 
-// Custom Hook
 const useDropdownEffects = () => {
 
     const [isDropdownVisible, setDropdownVisible] = useState<boolean>(false);

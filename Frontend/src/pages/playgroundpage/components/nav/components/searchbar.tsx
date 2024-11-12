@@ -10,7 +10,7 @@ const countries: string[] = [
     "France", 
     "Germany", 
     "Japan"
-]; // Example countries, can be expanded
+]; 
 
 interface PassengerCount {
     adults: number;

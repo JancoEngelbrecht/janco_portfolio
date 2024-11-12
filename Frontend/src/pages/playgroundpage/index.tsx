@@ -1,6 +1,6 @@
 import React from 'react'
-import NavComponents from './navcomponents'
-import ScrollComponents from './scrollcomponents'
+import NavComponents from './components/nav'
+import ScrollComponents from './components/scroll'
 
 const index: React.FC = () => {
   

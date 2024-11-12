@@ -1,10 +1,10 @@
 import React from 'react';
 
-import HorizontalScroller from './horizontalscroller';
-import Watch1 from '../../../assets/watch1.jpg'
-import Watch2 from '../../../assets/watch2.jpg'
-import Watch3 from '../../../assets/watch3.jpg'
-import Watch4 from '../../../assets/watch4.jpg'
+import Watch1 from '../../../../assets/watch1.jpg'
+import Watch2 from '../../../../assets/watch2.jpg'
+import Watch3 from '../../../../assets/watch3.jpg'
+import Watch4 from '../../../../assets/watch4.jpg'
+import HorizontalScroller from './components/HorizontalScroller';
 
 const Index: React.FC = () => {
 
@@ -22,7 +22,7 @@ const Index: React.FC = () => {
     <>
       {/* Navigation Header */}
       <header className=" text-center py-4 text-gray text-lg sm:text-xl font-semibold">
-        Scrolling
+        SCROLLER
       </header>
 
 

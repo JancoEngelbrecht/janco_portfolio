@@ -1,16 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import Dropdown from './dropdown';
-import Sidebar from './sidebar';
-import Searchbar from './searchbar';
-import PlaneImage from '../../../assets/plane.jpg';
+import Dropdown from './components/dropdown';
+import Sidebar from './components/sidebar';
+import Searchbar from './components/searchbar';
+import PlaneImage from '../../../../assets/plane.jpg';
 
 const Index: React.FC = () => {
+  const [isSidebarVisible, setSidebarVisible] = useState(true);
+
+  // Toggle sidebar visibility on small screens
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) { 
+        setSidebarVisible(false);
+      } else {
+        setSidebarVisible(true);
+      }
+    };
+
+    handleResize(); // Set initial state based on screen size
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <>
       {/* Navigation Header */}
       <header className="w-full text-center py-4 text-gray text-lg sm:text-xl font-semibold">
-        Navigation
+        NAVIGATION
       </header>
 
       {/* Main Component */}
@@ -23,8 +43,10 @@ const Index: React.FC = () => {
           <div className="flex w-full z-20">
             <Dropdown />
           </div>
+
           <div className="flex h-full">
-            <Sidebar />
+            {/* Render Sidebar conditionally based on isSidebarVisible */}
+            {isSidebarVisible && <Sidebar />}
             <div className="flex w-full justify-center items-center z-10">
               <Searchbar />
             </div>
