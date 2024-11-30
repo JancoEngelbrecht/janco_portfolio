@@ -1,16 +1,16 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useDrag } from '@use-gesture/react';
 import { Product } from '../interfaces/Product';
 import { SCROLL_OFFSET } from '../constants';
 import ScrollButton from './ScrollButton';
 import ProductCard from './ProductCard';
-import './styles.css';
 
 interface HorizontalScrollerProps {
   products: Product[];
+  onScroll: () => void;
 }
 
-const HorizontalScroller: React.FC<HorizontalScrollerProps> = ({ products }) => {
+const HorizontalScroller: React.FC<HorizontalScrollerProps> = ({ products, onScroll }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // Handles smooth scrolling when scroll buttons are clicked
@@ -29,11 +29,12 @@ const HorizontalScroller: React.FC<HorizontalScrollerProps> = ({ products }) => 
     { axis: 'x', pointer: { touch: true } }
   );
 
+  // Apply the animation class on scroll
   useEffect(() => {
     const container = scrollContainerRef.current;
 
     const updateScrollPosition = () => {
-      // Any additional scroll-related side-effects can be handled here
+      onScroll(); // Trigger the callback passed from the Index component
     };
 
     container?.addEventListener('scroll', updateScrollPosition);

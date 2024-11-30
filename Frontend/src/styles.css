@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: 'Porter Sans Block';
+    src: url('/src/assets/fonts/porter-sans-block.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }

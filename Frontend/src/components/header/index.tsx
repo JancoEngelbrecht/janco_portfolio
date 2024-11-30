@@ -1,76 +1,84 @@
-import React, { useState, useEffect } from "react";
-import menuicon from "../../assets/menu_icon.png";
+import React from "react";
+import "./styles.css";
+import faceimage from "../../assets/janco_closeup.png";
 
-const Header:React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
-  // Toggle menu state
-  const handleMenuClick = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  // Close the menu when clicking outside of it
-  useEffect(() => {
-    const handleClickOutside = (event:MouseEvent) => {
-      const target = event.target as HTMLElement;
-      if (!target.closest("#menu") && !target.closest("#menuicon")) {
-        setMenuOpen(false); // Close the menu when clicking outside
-      }
-    };
-
-    // Add event listener when menu is open
-    if (menuOpen) {
-      document.addEventListener("click", handleClickOutside);
-    }
-
-    // Cleanup event listener when component unmounts or menu closes
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [menuOpen]);
-
+const Header: React.FC = () => {
   return (
-    <header className="relative overflow-hidden pl-6 w-full h-36 text-white text-4xl font-segoe z-50 bg-gradient-to-br from-neutral-800 from-0% to-neutral-950 to-70%">
-      <div className="flex justify-between items-center">
-        <div className="flex items-center">
-          <a href="/" className="hover:animate-bounce"><b>J</b></a>
-          <a href="/" className="hover:animate-bounce"><b>.</b></a>
-          <a href="/" className="hover:animate-bounce"><b>E</b></a>
-          <a href="/" className="hover:animate-bounce"><b>.</b></a>
-        </div>
+    <>
+      {/* Include SVG Filter */}
+      <svg xmlns="http://www.w3.org/2000/svg" style={{ display: "none" }}>
+        <filter id="static-noise">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.8"
+            numOctaves="3"
+            stitchTiles="stitch"
+          />
+        </filter>
+      </svg>
 
-        {/* Menu Icon */}
-        <div className="relative ">
-          <div 
-            className={`transition-transform transform ${menuOpen ? "translate-x-64" : ""} duration-300 ease-in-out z-50 `} // Move the icon 16rem (64 Tailwind units) to the right when open
-            onClick={handleMenuClick}
-            id="menuicon"
-          >
-            <img
-              src={menuicon}
-              alt="menu icon"
-              className="w-16 h-auto cursor-pointer pt-4 pr-6 "
-            />
+      <div className="relative w-full h-auto  bg-olivegreen opacity-85 z-0 rounded-b-2xl">
+       
+
+        {/* Header Content */}
+        <header className="relative z-10 flex flex-col items-center w-full bg-transparent ">
+          {/* Main Header Section */}
+          <div className="flex items-center justify-between border-t border-b border-white w-5/6 px-4 py-4 mt-10">
+            <div className="text-white text-3xl font-porter text-shadow-md tracking-wide">
+              TRIUMPH
+            </div>
+            <nav className="flex space-x-8">
+              <a href="/projects" className="text-white text-sm uppercase tracking-widest hover:opacity-80">
+                Projects
+              </a>
+              <a href="/about" className="text-white text-sm uppercase tracking-widest hover:opacity-80">
+                About
+              </a>
+              <a href="/contact" className="text-white text-sm uppercase tracking-widest hover:opacity-80">
+                Contact
+              </a>
+              <a href="/showcase" className="text-white text-sm uppercase tracking-widest hover:opacity-80">
+                Showcase
+              </a>
+            </nav>
           </div>
 
-          {/* Menu Items (responsive) */}
-          <div
-            id="menu"
-            className={`absolute top-0 right-0 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 p-4 rounded-lg transition-transform ${menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"} duration-500 ease-in-out z-40`} 
-          >
-            <a href="/contact" className="text-white text-xl cursor-pointer">
-              Contact
-            </a>
-            <a href="/projects" className="text-white text-xl cursor-pointer">
-              Projects
-            </a>
-            <a href="/playground" className="text-white text-xl cursor-pointer">
-              Playground
+          {/* Sub Row for "HOME/" */}
+          <div className="w-5/6 border-white px-4 py-6">
+            <a href="/" className="text-white text-sm uppercase tracking-wide">
+              HOME /
             </a>
           </div>
-        </div>
+
+          {/* Two-Column Row */}
+          <div className="w-5/6 pb-20 flex justify-center space-x-64 items-center border-b-2">
+            {/* Left Column */}
+            <div className="text-white text-5xl font-bold text-left pl-12">
+              <h1 className="space-y-4">
+                <div>FRONTEND</div>
+                <div>DEVELOPER</div>
+              </h1>
+            </div>
+
+            {/* Right Column */}
+            <div className="flex text-white text-sm justify-center items-center">
+              <img
+                src={faceimage}
+                alt="Image of a man's Face"
+                className="w-1/2 h-auto object-contain rounded-b-[130px]"
+              />
+            </div>
+          </div>
+
+          {/* Footer Row */}
+          <div className="w-5/6 border-white px-4 py-6">
+            <a href="/" className="text-white text-sm uppercase tracking-wide">
+              2024
+            </a>
+          </div>
+        </header>
       </div>
-    </header>
+    </>
   );
 };
 

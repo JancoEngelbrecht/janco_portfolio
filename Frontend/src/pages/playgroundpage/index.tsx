@@ -7,7 +7,7 @@ const index: React.FC = () => {
   return (
     <div>
       <NavComponents />
-        <ScrollComponents />
+      <ScrollComponents />
     </div>
 );
 };
