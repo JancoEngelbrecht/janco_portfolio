@@ -1,31 +1,56 @@
 import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import faceimage from "../../assets/janco_closeup.png";
 
-const Footer:React.FC = () => {
+const Footer: React.FC = () => {
   return (
-    <footer className=" bg-gradient-to-br from-neutral-800 from-0% to-neutral-950 to-70% text-white py-6">
-      <div className="container mx-auto text-center">
-        {/* Social Media Icons */}
-        <div className="flex justify-center space-x-6 mb-4">
-          <a href="https://www.instagram.com/janco_engelbrecht/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
-            <i className="fab fa-instagram" aria-hidden="true"></i>
-          </a>
-          <a href="https://github.com/JancoEngelbrecht" aria-label="Github" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
-            <i className="fab fa-github" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/janco-engelbrecht-032968171/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
-            <i className="fab fa-linkedin-in" aria-hidden="true"></i>
-          </a>
+    <footer className="bg-white text-black py-10 ">
+      <div className="w-5/6 container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 items-top">
+
+        {/* Column 1 - Website Map */}
+        <div className=" flex justify-center items-top">
+          <div className=' text-center md:text-left w-auto'>
+            <h4 className="text-3xl flex justify-center font-bold mb-8 text-[#3C3C3C]">Website map</h4>
+            <div className="grid grid-row-2 gap-8">
+              <div className="flex justify-left gap-x-11 text-[#636363]">
+                <span className="font-medium">Projects</span>
+                <span className="font-medium">Contact</span>
+              </div>
+              <div className="flex justify-left gap-x-14 text-[#636363]">
+                <span className="font-medium">About</span>
+                <span className="font-medium">Showcase</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Footer Info */}
-        <p className="text-gray-400 mb-4">Copyright © 2024 Janco Engelbrecht</p>
+        {/* Column 2 - Image and Description */}
+        <div className="pl-[20%] pr-[20%] text-center border-r-2 border-l-2 text-[#636363] ">
+          <h4 className="text-xs font-bold mb-2 ">
+            Janco Engelbrecht - Web & Mobile Application Developer
+          </h4>
+          <img
+            src={faceimage} // Replace with your image URL
+            alt="Databest Profile"
+            className="mx-auto h-32 rounded-full mb-16 mt-16 "
+          />
+          <p className="text-xs ">Rise Higher, Anchor Vision, Triumph Always</p>
+        </div>
 
-        {/* Footer Links */}
-        <div className="flex justify-center space-x-4 text-sm">
-          <a href="/" className="text-gray-400 hover:text-white">Home</a>
-          <a href="/contact" className="text-gray-400 hover:text-white">Contact</a>
-          <a href="/projects" className="text-gray-400 hover:text-white">Projects</a>
+        {/* Column 3 - Contact Information */}
+        <div className="flex justify-center items-top">
+          <div className=' text-center md:text-left w-auto'>
+            <h4 className="text-3xl font-bold  mb-8 text-[#3C3C3C]">Contact</h4>
+            <div className="grid grid-row-2 gap-8">
+              <div className="flex justify-left gap-x-11 text-[#636363]">
+                <span className="font-medium">EU: +27 637 312 556</span>
+                <span className="font-medium">Amersfoort, NL</span>
+              </div>
+              <div className="flex justify-left gap-x-14 text-[#636363]">
+                <span className="font-medium">www.jancoengelbrecht.com</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
